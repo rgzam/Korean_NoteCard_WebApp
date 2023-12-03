@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Korean_NoteCard_WebApp.Data;
 using Korean_NoteCard_WebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Korean_NoteCard_WebApp.Controllers
 {
@@ -42,7 +43,7 @@ namespace Korean_NoteCard_WebApp.Controllers
 
             return View(korean);
         }
-
+        [Authorize]
         // GET: Koreans/Create
         public IActionResult Create()
         {
@@ -84,6 +85,7 @@ namespace Korean_NoteCard_WebApp.Controllers
         // POST: Koreans/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Question,Answer")] Korean korean)
@@ -117,6 +119,7 @@ namespace Korean_NoteCard_WebApp.Controllers
         }
 
         // GET: Koreans/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -137,6 +140,7 @@ namespace Korean_NoteCard_WebApp.Controllers
         // POST: Koreans/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var korean = await _context.Korean.FindAsync(id);

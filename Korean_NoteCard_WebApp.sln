@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Korean_NoteCard_WebApp", "Korean_NoteCard_WebApp.csproj", "{DDA7C9C1-3A1A-4A1F-8601-5D2FD1CC8833}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Korean_NoteCard_WebApp", "Korean_NoteCard_WebApp.csproj", "{DDA7C9C1-3A1A-4A1F-8601-5D2FD1CC8833}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

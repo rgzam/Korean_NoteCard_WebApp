@@ -25,7 +25,14 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Koreans" asp-action="Index">NoteCards</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">leaderboard</a>
+                        </li>
                     </ul>
+                    <!-- Ensure that _LoginPartial is correctly implemented -->
                     <partial name="_LoginPartial" />
                 </div>
             </div>
@@ -42,6 +49,7 @@
             &copy; 2023 - Korean_NoteCard_WebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+    <!-- Ensure correct paths for jQuery and Bootstrap JS files -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
